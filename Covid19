@@ -1,0 +1,13 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as pltpd
+data=pd.read_csv("C:\\Users\\Ayushi\\Desktop\\district_level_latest.csv")
+data.head()
+data.tail()
+data.describe()
+#check null value
+data.isnull().sum()
+sns.relplot(x="Active", y="Recovered", data=data)
+sns.relplot(x="total_cases", y="deaths",data=data)
+sns.pairplot(data)
